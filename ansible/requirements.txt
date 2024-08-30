@@ -5,6 +5,7 @@ azure-mgmt-network
 azure-mgmt-storage
 azure-mgmt-automation
 azure-mgmt-notificationhubs
+azure.mgmt.datafactory
 azure-identity
 azure-storage-blob
 azure-cli
