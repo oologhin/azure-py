@@ -1,1 +1,4 @@
-localhost ansible_connection=local
+all:
+  hosts:
+    localhost:
+      ansible_connection: local

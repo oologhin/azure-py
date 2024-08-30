@@ -48,7 +48,7 @@ jobs:
           pip install ansible[azure]
 
       - name: Run Ansible Playbook
-        run: ansible-playbook -i ansible/inventory ansible/playbook.yml
+        run: ansible-playbook -i ansible/inventory.yml ansible/playbook.yml
         env:
           IMAGE_TAG: ${{ github.sha }}
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
