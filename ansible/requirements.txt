@@ -1,0 +1,9 @@
+ansible[azure]
+azure-mgmt-resource
+azure-mgmt-compute
+azure-mgmt-network
+azure-mgmt-storage
+azure-mgmt-automation
+azure-identity
+azure-storage-blob
+azure-cli
