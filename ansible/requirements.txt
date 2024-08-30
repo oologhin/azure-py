@@ -9,3 +9,5 @@ azure.mgmt.datafactory
 azure-identity
 azure-storage-blob
 azure-cli
+msgraph-core 
+msgraph-sdk-python
