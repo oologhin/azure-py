@@ -1,5 +1,10 @@
 ansible[azure]
-azure-mgmt
+azure-mgmt-resource
+azure-mgmt-compute
+azure-mgmt-network
+azure-mgmt-storage
+azure-mgmt-automation
+azure-mgmt-notificationhubs
 azure-identity
 azure-storage-blob
 azure-cli
