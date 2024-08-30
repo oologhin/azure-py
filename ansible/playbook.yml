@@ -12,6 +12,6 @@
       azure_rm_deployment:
         resource_group_name: "{{ resource_group }}"
         location: "{{ location }}"
-        template: "{{ lookup('file', 'azuredeploy.json') }}"
+        template: "{{ lookup('file', '../azuredeploy.json') }}"
         parameters:
           containerImage: "{{ image_name }}"
