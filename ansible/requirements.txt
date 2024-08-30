@@ -9,5 +9,5 @@ azure-mgmt-datafactory
 azure-identity
 azure-storage-blob
 azure-cli
-msgraph-core
 msal
+msgraph-core
