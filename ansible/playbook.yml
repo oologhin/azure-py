@@ -8,8 +8,12 @@
     image_name: "diezusnet/flaskapp:{{ lookup('env', 'IMAGE_TAG') }}"
 
   tasks:
-    - name: List ansible directory contents
-      run: ls -l ansible/
+    - name: Debug output of current working directory
+      command: pwd
+      register: pwd_output
+    - name: Show output of pwd
+      debug:
+        msg: "The current working directory is {{ pwd_output.stdout }}"
 
     - name: Deploy ARM Template to Azure
       azure_rm_deployment:
