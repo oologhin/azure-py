@@ -1,0 +1,17 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    resource_group: TRN-Training
+    location: YourAzureRegion  # e.g., eastus
+    #image_name: ${{ secrets.DOCKER_USERNAME }}/flaskapp:latest   # This should match the image pushed by earlier CI/CD steps
+    image_name: "diezusnet/flaskapp:{{ lookup('env', 'IMAGE_TAG') }}"
+
+  tasks:
+    - name: Deploy ARM Template to Azure
+      azure_rm_deployment:
+        resource_group_name: "{{ resource_group }}"
+        location: "{{ location }}"
+        template: "{{ lookup('file', 'azuredeploy.json') }}"
+        parameters:
+          containerImage: "{{ image_name }}"
